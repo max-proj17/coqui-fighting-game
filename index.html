@@ -1,0 +1,46 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<style>
+		*{box-sizing: border-box; font-family: 'Press Start 2P', cursive;} <!-- applies to all elements. makes sure padding does not affect width of elements -->
+	</style>
+</head>
+<body>
+	<!-- red container div -->
+	<div style="position: relative; display: inline-block">
+
+
+		<!-- smaller red cont div -->
+		<div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px;">
+
+
+			<!-- player health -->
+			<div style="position: relative; height: 80px; width: 100%; display: flex; justify-content: flex-end; 
+			border-top: 10px solid white; border-left: 10px solid white; border-bottom: 10px solid white">
+				<div style = "background-color: red; height: 60px; width: 100%;"></div>
+				<div id="playerHealth" style="position: absolute; height: 60px; background: #3b82f6; top:0; right:0; bottom:0; width:100%;"></div> 
+			</div>
+
+
+			<!-- timer --><!-- id's are what the js file can access div elements with -->
+			<div id="timer" style= "background-color: black; height: 100px; width: 250px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; border: 10px solid white">10</div>
+
+
+			<!-- enemy health -->
+			<div style="position: relative; height: 80px; width: 100%; border-top: 10px solid white; border-right: 10px solid white; border-bottom: 10px solid white">
+				<div style = "background-color: red; height: 60px; width: 100%;"></div>
+				<div id="enemyHealth" style="position: absolute; background: #3b82f6; top:0; right:0; bottom:0; left:0"></div> 
+			</div>
+
+			<div></div>
+		</div>
+		<div id = "displayText" style= "position: absolute; color: white; display: flex; align-items: center; justify-content: center; top:0; right:0; bottom:0; left:0"></div>
+		<canvas id="canvas"></canvas>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- gsap is what we use to decrease health slowly -->
+	<script src="js/utils.js"></script> <!HTML and JS code run side by side>
+	<script src="js/classes.js"></script> <!HTML and JS code run side by side>
+	<script src="index.js"></script> <!HTML and JS code run side by side>
+
+</body>
