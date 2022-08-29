@@ -122,7 +122,7 @@ class Fighter extends Sprite {
 		{
 			this.velocity.x = 0
 		}
-		if(this.position.y + this.height + this.velocity.y >= canvas.height-90){
+		if(this.position.y + this.height + this.velocity.y >= -90){
 			this.jumpCount = 0
 			this.velocity.y = 0
 		}else{
